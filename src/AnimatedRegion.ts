@@ -137,6 +137,7 @@ export default class AnimatedMapRegion extends AnimatedWithChildren {
     const animations = [];
     for (const type of configTypes) {
       if (config.hasOwnProperty(type)) {
+        // @ts-ignore
         animations.push(
           Animated.spring(this[type], {
             ...config,
@@ -154,6 +155,7 @@ export default class AnimatedMapRegion extends AnimatedWithChildren {
     const animations = [];
     for (const type of configTypes) {
       if (config.hasOwnProperty(type)) {
+        // @ts-ignore
         animations.push(
           Animated.timing(this[type], {
             ...config,
